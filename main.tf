@@ -15,7 +15,7 @@ locals {
 }
 
 module "project_workspace" {
-	source = "github.com/BCDevOps/terraform-aws-sea-account-set.git?ref=v.0.0.2"
+	source = "github.com/BCDevOps/terraform-aws-sea-account-set.git?ref=v0.0.2"
 	project = local.project
 	org_admin_role_name = var.org_admin_role_name
 	account_email_prefix = var.account_email_prefix
