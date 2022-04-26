@@ -1,15 +1,10 @@
-
 provider "aws" {
-  version = "~> 3.0"
   region  = "ca-central-1"
-
   assume_role {
     role_arn     = "arn:aws:iam::${var.master_account_id}:role/${var.automation_role_name}"
     session_name = "slz-terraform-automation"
   }
 }
-
-
 locals {
   project = jsondecode(file(var.project_definition_file_path))
 }
