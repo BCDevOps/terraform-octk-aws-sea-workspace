@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = "ca-central-1"
+  region = "ca-central-1"
   assume_role {
     role_arn     = "arn:aws:iam::${var.master_account_id}:role/${var.automation_role_name}"
     session_name = "slz-terraform-automation"
@@ -10,7 +10,7 @@ locals {
 }
 
 module "project_workspace" {
-  source               = "github.com/BCDevOps/terraform-aws-sea-account-set.git?ref=v0.0.4"
+  source               = "github.com/BCDevOps/terraform-aws-sea-account-set.git?ref=v0.0.5"
   project              = local.project
   org_admin_role_name  = var.org_admin_role_name
   account_email_prefix = var.account_email_prefix
