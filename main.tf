@@ -15,5 +15,6 @@ module "project_workspace" {
   org_admin_role_name  = var.org_admin_role_name
   account_email_prefix = var.account_email_prefix
   account_email_domain = var.account_email_domain
+  close_on_deletion    = var.close_on_deletion
 }
 

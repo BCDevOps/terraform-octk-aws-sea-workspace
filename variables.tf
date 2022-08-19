@@ -32,3 +32,9 @@ variable "org_admin_role_name" {
   type        = string
   default     = "OrganizationAccountAccessRole"
 }
+
+variable "close_on_deletion" {
+  description = "true means that the account will be closed when it is deleted.  false means that the account be removed from the aws org when it is deleted."
+  type        = boolean
+  default     = false
+}
