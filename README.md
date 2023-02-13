@@ -5,7 +5,7 @@
 
 This repo contains a Terraform module that is part of the tooling to provision a project team's accounts within an AWS Landing Zone.
 
-This module is used in conjunction with other modules that provide other "layers" to project accounts within a landing zone.  The modules are orchestrated using a `terragrunt` configuration that is contained in a private repository.     
+This module is used in conjunction with other modules that provide other "layers" to project accounts within a landing zone.  The modules are orchestrated using a `terragrunt` configuration that is contained in a private repository.
 
 ## Third-Party Products/Libraries used and the licenses they are covered by
 
@@ -15,9 +15,12 @@ HashiCorp Terraform - [![License: MPL 2.0](https://img.shields.io/badge/License-
 - [x] Development
 - [ ] Production/Maintenance
 
-## How To Use
+# How To Use
 
 Note: This module is intended to be used by another "root" module, or as part of a `terragrunt` "stack" rather than on its own.  It doesn't do much on its own.
+
+<!-- BEGIN_TF_DOCS -->
+<!-- END_TF_DOCS -->
 
 ## Getting Help or Reporting an Issue
 <!--- Example below, modify accordingly --->
