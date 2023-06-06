@@ -34,7 +34,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_project_workspace"></a> [project\_workspace](#module\_project\_workspace) | github.com/BCDevOps/terraform-aws-sea-account-set.git | v0.0.7 |
+| <a name="module_project_workspace"></a> [project\_workspace](#module\_project\_workspace) | github.com/BCDevOps/terraform-aws-sea-account-set.git | v0.0.8 |
 
 ## Resources
 
