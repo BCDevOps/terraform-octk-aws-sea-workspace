@@ -1,5 +1,17 @@
 locals {
-  project = jsondecode(file(var.project_definition_file_path))
+  project = merge(
+    jsondecode(file(var.project_definition_file_path)),
+    {
+      tags = merge(
+        jsondecode(file(var.project_definition_file_path)).tags,
+        contains(keys(jsondecode(file(var.project_definition_file_path)).tags), "additional_contacts") ?
+        {
+          "additional_contacts" = join("/", [for contact in jsondecode(file(var.project_definition_file_path)).tags.additional_contacts : contact.email])
+        } :
+        {}
+      )
+    }
+  )
 }
 
 module "project_workspace" {
