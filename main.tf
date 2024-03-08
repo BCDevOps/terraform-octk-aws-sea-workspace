@@ -1,14 +1,17 @@
 locals {
+  project_json = jsondecode(file(var.project_definition_file_path))
+
   project = merge(
-    jsondecode(file(var.project_definition_file_path)),
+    local.project_json,
     {
       tags = merge(
-        jsondecode(file(var.project_definition_file_path)).tags,
-        contains(keys(jsondecode(file(var.project_definition_file_path)).tags), "additional_contacts") ?
-        {
-          "additional_contacts" = join("/", [for contact in jsondecode(file(var.project_definition_file_path)).tags.additional_contacts : contact.email])
-        } :
-        {}
+        local.project_json.tags,
+        contains(keys(local.project_json.tags), "additional_contacts") ? {
+          "additional_contacts" = join("/", [for contact in local.project_json.tags.additional_contacts : contact.email])
+        } : {},
+        contains(keys(local.project_json.tags), "expense_authority") ? {
+          "expense_authority" = "${local.project_json.tags.expense_authority.name}/${local.project_json.tags.expense_authority.email}"
+        } : {}
       )
     }
   )
