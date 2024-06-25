@@ -40,6 +40,6 @@ variable "close_on_deletion" {
 }
 
 variable "SSC_CBRID" {
-  type = string
+  type        = string
   description = "Shared Services Canada Cloud Business Requirement ID"
 }
