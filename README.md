@@ -44,6 +44,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_SSC_CBRID"></a> [SSC\_CBRID](#input\_SSC\_CBRID) | Shared Services Canada Cloud Business Requirement ID | `string` | n/a | yes |
 | <a name="input_account_email_domain"></a> [account\_email\_domain](#input\_account\_email\_domain) | Email domain to use when creating generated account email addresses. | `string` | `"cloud.gov.bc.ca"` | no |
 | <a name="input_account_email_prefix"></a> [account\_email\_prefix](#input\_account\_email\_prefix) | Prefix to use when creating generated account email addresses. | `string` | n/a | yes |
 | <a name="input_automation_role_name"></a> [automation\_role\_name](#input\_automation\_role\_name) | The name role to be assumed in the master account in order to allow creation of accounts within the organization. | `string` | n/a | yes |
