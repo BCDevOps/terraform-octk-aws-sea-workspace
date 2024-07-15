@@ -25,6 +25,5 @@ module "project_workspace" {
   account_email_domain = var.account_email_domain
   close_on_deletion    = var.close_on_deletion
   master_account_id    = var.master_account_id
-  SSC_CBRID            = var.SSC_CBRID
 }
 
